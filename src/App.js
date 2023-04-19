@@ -29,6 +29,12 @@ function App() {
     }
 
     fetchWeather();
+
+    const timer = setInterval(fetchWeather, 5000);
+
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   // Filtering the List
@@ -37,18 +43,24 @@ function App() {
   );
 
   // Delete ListItem
-  function handleDeleteActivity (activity){
+  function handleDeleteActivity(activity) {
     const idToBeDeleted = activity.id;
-    setActivities(activities.filter((activity)=>activity.id !== idToBeDeleted)); 
+    setActivities(
+      activities.filter((activity) => activity.id !== idToBeDeleted)
+    );
   }
- 
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Weather & Activities App</h1>
       </header>
       <main>
-        <List activities={filteredActivities} weather={weather} onDeleteActivity={handleDeleteActivity}/>
+        <List
+          activities={filteredActivities}
+          weather={weather}
+          onDeleteActivity={handleDeleteActivity}
+        />
         <Form onAddActivity={handleAddActivity} />
       </main>
     </div>
