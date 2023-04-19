@@ -1,6 +1,6 @@
 import ListItem from "../ListItem";
 
-export default function List({ activities, weather }) {
+export default function List({ activities, weather, onDeleteActivity }) {
   return (
     <>
       <div>
@@ -15,7 +15,7 @@ export default function List({ activities, weather }) {
       </div>
       <ul>
         {activities.map((activity) => {
-          return <ListItem activity={activity}/>;
+          return <ListItem activity={activity} onDeleteActivity={onDeleteActivity}/>;
         })}
       </ul>
     </>
