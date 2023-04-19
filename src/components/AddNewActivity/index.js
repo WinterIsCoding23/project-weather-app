@@ -30,7 +30,7 @@ export default function AddNewActivity({ onAddActivity }) {
       <form className="add-new-activity__form" onSubmit={handleSubmit}>
         <div>
           <label className="add-new-activity__form__label" htmlFor="name">
-            Name:
+            Name
           </label>
           <input
             className="add-new-activity__form__input"
@@ -45,7 +45,7 @@ export default function AddNewActivity({ onAddActivity }) {
             className="add-new-activity__form__label"
             htmlFor="good-weather-activity"
           >
-            Good-weather activity:
+            Good-weather activity
           </label>
           <input
             className="add-new-activity__form__input"
