@@ -15,7 +15,13 @@ export default function List({ activities, weather, onDeleteActivity }) {
       </div>
       <ul>
         {activities.map((activity) => {
-          return <ListItem activity={activity} onDeleteActivity={onDeleteActivity}/>;
+          return (
+            <ListItem
+              key={activity.id}
+              activity={activity}
+              onDeleteActivity={onDeleteActivity}
+            />
+          );
         })}
       </ul>
     </>
