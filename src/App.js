@@ -1,9 +1,13 @@
 import "./App.css";
-import Form from "./components/Form";
-import List from "./components/List/Index";
+
 import { useEffect, useState } from "react";
 import { uid } from "uid";
 import useLocalStorageState from "use-local-storage-state";
+
+import Header from "./components/Header";
+import Form from "./components/Form";
+import List from "./components/List/Index";
+import Footer from "./components/Footer";
 
 function App() {
   function handleAddActivity(activity) {
@@ -51,13 +55,13 @@ function App() {
   }
 
   // Set background-color according to weather
-  const containerClassForWeather = weather.isGoodWeather ? "container--sunny" : "container--rainy";
+  const containerClassForWeather = weather.isGoodWeather
+    ? "container--sunny"
+    : "container--rainy";
 
   return (
     <div className={`container ${containerClassForWeather}`}>
-      <header className="header">
-        <h1>Weather & Activities App</h1>
-      </header>
+      <Header />
       <main>
         <List
           activities={filteredActivities}
@@ -66,6 +70,7 @@ function App() {
         />
         <Form onAddActivity={handleAddActivity} />
       </main>
+      <Footer />
     </div>
   );
 }
