@@ -50,9 +50,12 @@ function App() {
     );
   }
 
+  // Set background-color according to weather
+  const containerClassForWeather = weather.isGoodWeather ? "container--sunny" : "container--rainy";
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={`container ${containerClassForWeather}`}>
+      <header className="header">
         <h1>Weather & Activities App</h1>
       </header>
       <main>
