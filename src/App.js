@@ -36,13 +36,19 @@ function App() {
     (activity) => activity.isForGoodWeather === weather.isGoodWeather
   );
 
+  // Delete ListItem
+  function handleDeleteActivity (activity){
+    const idToBeDeleted = activity.id;
+    setActivities(activities.filter((activity)=>activity.id !== idToBeDeleted)); 
+  }
+ 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Weather & Activities App</h1>
       </header>
       <main>
-        <List activities={filteredActivities} weather={weather} />
+        <List activities={filteredActivities} weather={weather} onDeleteActivity={handleDeleteActivity}/>
         <Form onAddActivity={handleAddActivity} />
       </main>
     </div>
