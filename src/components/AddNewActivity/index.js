@@ -29,11 +29,24 @@ export default function AddNewActivity({ onAddActivity }) {
       <h1 className="add-new-activity__title">Add new Activity</h1>
       <form className="add-new-activity__form" onSubmit={handleSubmit}>
         <div>
-          <label className="add-new-activity__form__label" htmlFor="name">Name:</label>
-          <input className="add-new-activity__form__input" type="text" id="name" name="name" autoFocus></input>
+          <label className="add-new-activity__form__label" htmlFor="name">
+            Name:
+          </label>
+          <input
+            className="add-new-activity__form__input"
+            type="text"
+            id="name"
+            name="name"
+            autoFocus
+          ></input>
         </div>
         <div>
-          <label className="add-new-activity__form__label" htmlFor="good-weather-activity">Good-weather activity:</label>
+          <label
+            className="add-new-activity__form__label"
+            htmlFor="good-weather-activity"
+          >
+            Good-weather activity:
+          </label>
           <input
             className="add-new-activity__form__input"
             type="checkbox"
@@ -41,7 +54,9 @@ export default function AddNewActivity({ onAddActivity }) {
             name="isForGoodWeather"
           ></input>
         </div>
-        <button className="add-new-activity__button" type="submit">Submit</button>
+        <button className="add-new-activity__button" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );

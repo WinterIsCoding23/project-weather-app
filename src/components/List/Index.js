@@ -4,7 +4,7 @@ import WeatherDisplay from "../WeatherDisplay";
 export default function List({ activities, weather, onDeleteActivity }) {
   return (
     <section>
-      <WeatherDisplay weather={weather}/>
+      <WeatherDisplay weather={weather} />
       <ul>
         {activities.map((activity) => {
           return (
