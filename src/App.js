@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Form from "./components/Form";
+import List from "./components/List/Index";
+import { useState } from "react";
+import { uid } from "uid";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
+  function handleAddActivity(activity) {
+    const id = uid();
+    const activityWithId = {...activity, id}
+    setActivities([...activities, activityWithId]);
+  }
+
+  //const [activities, setActivities] = useState([]);
+  const [activities, setActivities] = useLocalStorageState("activities", { defaultValue: [] });
+
+  // Filtering the List
+  const isGoodWeather = true;
+  const filteredActivities = activities.filter(activity => activity.isForGoodWeather === isGoodWeather);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Weather & Activities App</h1>
       </header>
+      <main>
+        <List activities={filteredActivities} isGoodWeather={isGoodWeather} />
+        <Form onAddActivity={handleAddActivity} />
+      </main>
     </div>
   );
 }
