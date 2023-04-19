@@ -19,6 +19,8 @@ body {
 .container {
   color: var(--color-cloudy);
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 120px 1fr 120px;
 }
 
 .container--sunny {
@@ -34,7 +36,4 @@ body {
   padding: 20px;
   text-align: center;
   font-size: 1rem; /*ask Marcell*/
-}
-
-.foo {
 }
