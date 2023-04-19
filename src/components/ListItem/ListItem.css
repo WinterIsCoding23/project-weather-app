@@ -1,0 +1,16 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* border: 1px solid red; */
+  margin-bottom: 15px;
+}
+
+.container--rainy .list-item {
+  background-color: var(--color-sunny);
+  color: var(--color-grayish);
+}
+
+.container--sunny .list-item {
+  background-color: var(--color-green);
+}

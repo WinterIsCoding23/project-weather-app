@@ -1,11 +1,12 @@
+import "./List.css";
 import ListItem from "../ListItem";
 import WeatherDisplay from "../WeatherDisplay";
 
 export default function List({ activities, weather, onDeleteActivity }) {
   return (
-    <section>
+    <section className="list">
       <WeatherDisplay weather={weather} />
-      <ul>
+      <ul className="list__activities">
         {activities.map((activity) => {
           return (
             <ListItem
