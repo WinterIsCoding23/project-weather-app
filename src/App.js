@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import List from "./components/List/Index";
 import { useState } from "react";
 import { uid } from "uid";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
   function handleAddActivity(activity) {
@@ -11,7 +12,8 @@ function App() {
     setActivities([...activities, activityWithId]);
   }
 
-  const [activities, setActivities] = useState([]);
+  //const [activities, setActivities] = useState([]);
+  const [activities, setActivities] = useLocalStorageState("activities", { defaultValue: [] });
 
   return (
     <div className="App">
