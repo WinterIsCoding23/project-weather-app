@@ -5,7 +5,7 @@ import { uid } from "uid";
 import useLocalStorageState from "use-local-storage-state";
 
 import Header from "./components/Header";
-import Form from "./components/Form";
+import AddNewActivity from "./components/AddNewActivity";
 import List from "./components/List/Index";
 import Footer from "./components/Footer";
 
@@ -63,7 +63,7 @@ function App() {
     <div className={`container ${containerClassForWeather}`}>
       <Header />
       <main>
-        <Form onAddActivity={handleAddActivity} />
+        <AddNewActivity onAddActivity={handleAddActivity} />
         <List
           activities={filteredActivities}
           weather={weather}

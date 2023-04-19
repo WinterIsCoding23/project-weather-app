@@ -1,4 +1,6 @@
-export default function Form({ onAddActivity }) {
+import "./AddNewActivity.css";
+
+export default function AddNewActivity({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -23,7 +25,7 @@ export default function Form({ onAddActivity }) {
   }
 
   return (
-    <section>
+    <section className="form">
       <h1>Add new Activity</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
