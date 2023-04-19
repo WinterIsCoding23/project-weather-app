@@ -1,14 +1,21 @@
-
-
-export default function List ({activities, isGoodWeather}){
-    return (
-        <>
-            <h3>{isGoodWeather ? "Good" : "Bad"}</h3>
-            <ul>
-                {activities.map((activity)=> {
-                    return <li key={activity.id}>{activity.name}</li>;
-                })}
-            </ul>
-        </>
-    );
+export default function List({ activities, weather }) {
+  return (
+    <>
+      <div>
+        <h3>
+          {weather.condition} {weather.temperature} °C
+        </h3>
+        <h3>
+          {weather.isGoodWeather
+            ? "The weather is awesome! Go outside and:"
+            : "Bad weather outside! Here's what you can do now:"}
+        </h3>
+      </div>
+      <ul>
+        {activities.map((activity) => {
+          return <li key={activity.id}>{activity.name}</li>;
+        })}
+      </ul>
+    </>
+  );
 }
