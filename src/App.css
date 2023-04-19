@@ -31,3 +31,6 @@ body {
   background-color: var(--color-rainy);
 }
 
+main {
+  padding: 20px;
+}

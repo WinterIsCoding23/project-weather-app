@@ -25,18 +25,23 @@ export default function AddNewActivity({ onAddActivity }) {
   }
 
   return (
-    <section className="form">
-      <h1>Add new Activity</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" autoFocus></input>
-        <label htmlFor="good-weather-activity">Good-weather activity:</label>
-        <input
-          type="checkbox"
-          id="good-weather-activity"
-          name="isForGoodWeather"
-        ></input>
-        <button type="submit">Submit</button>
+    <section className="add-new-activity">
+      <h1 className="add-new-activity__title">Add new Activity</h1>
+      <form className="add-new-activity__form" onSubmit={handleSubmit}>
+        <div>
+          <label className="add-new-activity__form__label" htmlFor="name">Name:</label>
+          <input className="add-new-activity__form__input" type="text" id="name" name="name" autoFocus></input>
+        </div>
+        <div>
+          <label className="add-new-activity__form__label" htmlFor="good-weather-activity">Good-weather activity:</label>
+          <input
+            className="add-new-activity__form__input"
+            type="checkbox"
+            id="good-weather-activity"
+            name="isForGoodWeather"
+          ></input>
+        </div>
+        <button className="add-new-activity__button" type="submit">Submit</button>
       </form>
     </section>
   );
