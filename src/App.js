@@ -49,6 +49,8 @@ function App() {
   // Delete ListItem
   function handleDeleteActivity(activity) {
     const idToBeDeleted = activity.id;
+
+    window.confirm("Are you sure you want to delete this wonderful activity?") &&
     setActivities(
       activities.filter((activity) => activity.id !== idToBeDeleted)
     );
