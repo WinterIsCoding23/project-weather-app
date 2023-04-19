@@ -1,18 +1,10 @@
 import ListItem from "../ListItem";
+import WeatherDisplay from "../WeatherDisplay";
 
 export default function List({ activities, weather, onDeleteActivity }) {
   return (
-    <>
-      <div>
-        <h3>
-          {weather.condition} {weather.temperature} °C
-        </h3>
-        <h3>
-          {weather.isGoodWeather
-            ? "The weather is awesome! Go outside and:"
-            : "Bad weather outside! Here's what you can do now:"}
-        </h3>
-      </div>
+    <section>
+      <WeatherDisplay weather={weather}/>
       <ul>
         {activities.map((activity) => {
           return (
@@ -24,6 +16,6 @@ export default function List({ activities, weather, onDeleteActivity }) {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 }
