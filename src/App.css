@@ -13,12 +13,14 @@
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans;
 }
 
 .container {
   color: var(--color-cloudy);
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 90px 1fr 90px;
 }
 
 .container--sunny {
@@ -29,12 +31,6 @@ body {
   background-color: var(--color-rainy);
 }
 
-.header {
-  background-color: var(--color-green);
+main {
   padding: 20px;
-  text-align: center;
-  font-size: 1rem; /*ask Marcell*/
-}
-
-.foo {
 }

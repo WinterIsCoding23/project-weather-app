@@ -1,0 +1,23 @@
+.add-new-activity__form {
+  display: grid;
+  gap: 20px;
+}
+
+.add-new-activity__title {
+  margin-bottom: 5px;
+}
+
+.add-new-activity__form__label {
+  margin-right: 10px;
+}
+
+.add-new-activity__form__input {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.add-new-activity__button {
+  justify-self: center;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
