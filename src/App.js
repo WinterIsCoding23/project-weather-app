@@ -63,12 +63,12 @@ function App() {
     <div className={`container ${containerClassForWeather}`}>
       <Header />
       <main>
+        <Form onAddActivity={handleAddActivity} />
         <List
           activities={filteredActivities}
           weather={weather}
           onDeleteActivity={handleDeleteActivity}
         />
-        <Form onAddActivity={handleAddActivity} />
       </main>
       <Footer />
     </div>
