@@ -4,6 +4,7 @@
   padding: 10px;
   /* border: 1px solid red; */
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .container--rainy .list-item {
