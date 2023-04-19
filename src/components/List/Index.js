@@ -1,3 +1,5 @@
+import ListItem from "../ListItem";
+
 export default function List({ activities, weather }) {
   return (
     <>
@@ -13,7 +15,7 @@ export default function List({ activities, weather }) {
       </div>
       <ul>
         {activities.map((activity) => {
-          return <li key={activity.id}>{activity.name}</li>;
+          return <ListItem activity={activity}/>;
         })}
       </ul>
     </>
